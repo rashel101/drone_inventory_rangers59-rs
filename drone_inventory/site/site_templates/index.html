@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+<!-- flask flashed message to User-->
+<div class="container">
+    {% with messages= get_flashed_messages( with_categories =true) %}
+        {%if messages %}
+            {% for cat, msg in messages%}
+                {% if cat == 'user-created' %}
+                    <div class="alert alert-success">
+                        {{msg}}
+                        <button type= "button" class= 'close' data-dismiss= 'alert'>&times;</button>
+                    </div>
+
+                    {%elif cat == 'auth-success' %}
+                    <div class= 'alert alert-success'>
+                        {{msg}}
+                        <button type="button" class ='close' dtat-dismiss= 'alert'>&times;</button>
+                        
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+
+
+{% block content %}
+<div class="container">
+
+    <header class="row">
+        <div class="col-12 col-md-6" id="header-text">
+            <h2> Lets Build the future of drone inventory management together!</h2>
+            <h5> Create an amazing API tool for drone inventory management!</h5>
+            <div>
+                <button class="btn btn-primary">View Our DOCs</button>
+                <button class="btn btn-primary">Join Our Slack</button>
+            </div>
+        </div>
+        <!-- HEADER IMAGE-->
+        <div class="col-12 col-md-6">
+            <img src="../../static/images/undraw_server_status_5pbv.svg" alt="Drone Server Image" class="header-image">
+        </div>
+    </header>
+    <!-- start of middle section-->
+     <section class="row">
+         <div class="col-12" id="middle-text">
+            <h2>Display Your Inventory</h2>
+            <p> You can harness the power of our API to expand your drone brand!</p>
+         </div>
+     </section>
+     <!-- COLLECTION of features section-->
+     <section class="row" id="features-section">
+         <div class="col-12 col-md-4">
+             <img src="../../static/images/api.png" alt="API image" id= "api-image">
+            <h4>dedicated API Routes</h4>
+            <p> If you are a fan of using traditional API routes, we got it!</p>
+         </div>
+         <div class="col-12 col-md-4">
+            <img src="../../static/images/graphql.png" alt="graphql image" id= "graphql-image">
+            <h4>GraphQL API Routes</h4>
+            <p> If you wall ALL data from one endpoint, we got that too!</p>
+         </div>
+         <div class="col-12 col-md-4">
+            <img src="../../static/images/db.png"  alt="database-image" id= "database-image">
+            <h4>backed by a postgreSQL Database</h4>
+            <p> all data will be persisted in a PostgreSQL database</p>
+         </div>
+     </section>
+
+     <section class="row">
+         <div class="col-12 col-md-6">
+            <img src="../../static/images/undraw_drone_surveillance_kjjg.svg" alt="drone image" id="drone-image">
+         </div>
+         <div class="col-12 col-md-6">
+             <h4> Talk with like-minded drone business owners</h4>
+             <p>
+                 talk with other devs around the world and collab on projects with your data.
+                 Join the slack channel today!!
+             </p>
+             <div>
+                 <button class= "btn btn-primary"> veiw on github</button>
+                 <button class= "btn btn-primary"> Join our slack chanel</button>
+             </div>
+         </div>
+     </section>
+     <!-- START OF THE FOOTER SECTION-->
+     <footer class="row" id="footer">
+         <div class="col-2 col-md-2">
+             <img src= "../../static/images/Coding Drones Logo.png" alt="coding drones logo" id= "footer-logo">
+         </div>
+         <div class="col-2 col-md-2">
+             <div class= "footer-text-flex">
+                 <h4> Platform</h4>
+                 <p> why coding drones?</p>
+                 <p>the coding drones project</p>
+                 <p>donate</p>
+                 <p> Spread the word</p>
+                 <p>Our process</p>
+             </div>
+         </div>
+          
+         <div class="col-2 col-md-2">
+            <div class= "footer-text-flex">
+                <h4> Platform</h4>
+                <p> why coding drones?</p>
+                <p>the coding drones project</p>
+                <p>donate</p>
+                <p> Spread the word</p>
+                <p>Our process</p>
+            </div>
+        </div>
+        <div class="col-2 col-md-2">
+            <div class= "footer-text-flex">
+                <h4> Platform</h4>
+                <p> why coding drones?</p>
+                <p>the coding drones project</p>
+                <p>donate</p>
+                <p> Spread the word</p>
+                <p>Our process</p>
+            </div>
+        </div>
+        <div class="col-2 col-md-2">
+            <div class= "footer-text-flex">
+                <h4> Platform</h4>
+                <p> why coding drones?</p>
+                <p>the coding drones project</p>
+                <p>donate</p>
+                <p> Spread the word</p>
+                <p>Our process</p>
+            </div>
+        </div>
+        <div class="col-2 col-md-2">
+            <div class= "footer-text-flex">
+                <h4> Platform</h4>
+                <p> why coding drones?</p>
+                <p>the coding drones project</p>
+                <p>donate</p>
+                <p> Spread the word</p>
+                <p>Our process</p>
+            </div>
+        </div>
+     </footer>
+</div>
+                                        
+
+{% endblock content %}
